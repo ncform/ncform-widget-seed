@@ -1,4 +1,6 @@
-# ncform-widget-seed
+# nc-demo
+
+ncform nc-demo widget
 
 ## Project setup
 ```
@@ -9,6 +11,8 @@ npm install
 ```
 npm run serve
 ```
+
+You only need to care about `src/components/index.vue`
 
 ### Compiles and minifies for production
 ```
@@ -34,6 +38,3 @@ npm run test:e2e
 ```
 npm run test:unit
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

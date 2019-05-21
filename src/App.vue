@@ -1,28 +1,47 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <ncform
+      :form-schema="formSchema"
+      form-name="your-form-name"
+      v-model="formSchema.value"
+      @submit="submit()"
+    ></ncform>
+    <hr />
+    <el-button @click="submit()">Submit</el-button>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import NcDemo from "./components";
 
 export default {
-  name: "app",
-  components: {
-    HelloWorld
+  created() {
+    this.$ncformAddWidget({ name: "nc-demo", widget: NcDemo });
+  },
+  data() {
+    return {
+      formSchema: {
+        type: "object",
+        properties: {
+          demo: {
+            type: "string",
+            ui: {
+              widget: "nc-demo"
+            }
+          }
+        },
+        value: {}
+      }
+    };
+  },
+  methods: {
+    submit() {
+      this.$ncformValidate("your-form-name").then(data => {
+        if (data.result) {
+          console.log(this.$data.formSchema.value);
+        }
+      });
+    }
   }
 };
 </script>
-
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
