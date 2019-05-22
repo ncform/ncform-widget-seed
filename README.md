@@ -2,6 +2,8 @@
 
 ncform nc-demo widget
 
+How to use this widget please refer to [ [Custom ncform widget](https://github.com/ncform/ncform/blob/master/EXT-DOC.md#Custom-form-widget) ]
+
 ## Project setup
 ```
 npm install
