@@ -1,6 +1,6 @@
 # nc-demo
 
-ncform nc-demo widget
+nc-demo widget for [ncform](https://github.com/ncform/ncform)
 
 How to use this widget please refer to [ [Custom ncform widget](https://github.com/ncform/ncform/blob/master/EXT-DOC.md#Custom-form-widget) ]
 
