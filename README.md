@@ -2,7 +2,38 @@
 
 nc-demo widget for [ncform](https://github.com/ncform/ncform)
 
-How to use this widget please refer to [ [Custom ncform widget](https://github.com/ncform/ncform/blob/master/EXT-DOC.md#Custom-form-widget) ]
+## Install and basic usage
+
+```
+npm i -s nc-demo
+```
+
+**Add the widget**
+
+```
+import ncDemo from 'nc-demo';
+
+Vue.use(vueNcform, { extComponents: {ncDemo} });
+
+// or vm.$ncformAddWidget({name: 'ncDemo', widget: ncDemo});
+
+```
+
+**Use the widget**
+
+```
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "widget": "nc-demo",
+      "widgetConfig": {
+      }
+    }
+  }
+}
+```
 
 ## Project setup
 ```
