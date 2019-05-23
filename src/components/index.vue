@@ -15,7 +15,10 @@
   </div>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+.nc-demo {
+}
+</style>
 
 <script>
 import ncformCommon from "@ncform/ncform-common";
