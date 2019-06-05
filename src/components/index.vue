@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="nc-demo">
     <!-- use $nclang to get i18n data -->
     <label>{{ $nclang("hi", { name: mergeConfig.name }) }}</label>
 
